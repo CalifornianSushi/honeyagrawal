@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey Agrawal - Author</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    header {
+      background-color: #fff;
+      color: #000;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .author-profile {
+      text-align: center;
+    }
+
+    .author-profile img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .books {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .book {
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .book img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    form {
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    form button {
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Honey Agrawal</h1>
+    <p>Author & Storyteller</p>
+  </header>
+
+  <section class="author-profile">
+    <img src="https://via.placeholder.com/140" alt="Honey Agrawal" />
+    <p>Honey Agrawal is a passionate writer whose stories blend emotion, wisdom, and vivid imagination. With a love for philosophy, culture, and everyday beauty, Honey crafts narratives that speak to the heart.</p>
+  </section>
+
+  <section>
+    <h2>Books</h2>
+    <div class="books">
+      <div class="book">
+        <img src="https://via.placeholder.com/260x360" alt="Book Cover 1" />
+        <h3>Day and Night</h3>
+        <p>A poetic journey in Hindi and English that explores the contrast and harmony of life through dual perspectives.</p>
+      </div>
+      <div class="book">
+        <img src="https://via.placeholder.com/260x360" alt="Book Cover 2" />
+        <h3>Echoes of Thought</h3>
+        <p>A reflection on mindfulness and resilience, this collection brings calm and clarity to everyday challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Honey</h2>
+    <p>Email: <a href="mailto:garg82@gmail.com">garg82@gmail.com</a></p>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Honey Agrawal. All rights reserved.
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("767McGS6Bimd3DLvt");
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.send("service_6hv8fqw", "template_lnpznan", {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    }).then(function () {
+      alert("Message sent successfully!");
+      document.getElementById("contactForm").reset();
+    }, function (error) {
+      console.error("EmailJS error:", error);
+      alert("Failed to send message. Please try again.");
+    });
+  });
+</script>
+</body>
+</html>
