@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Honey Agrawal - Author</title>
+  <title>Honey Agrawaaal - Author</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
@@ -25,7 +25,7 @@
 
     section {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
 
@@ -33,12 +33,14 @@
       text-align: center;
     }
 
-    .author-profile img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
+   .author-profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 25%; /* shifts image down */
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
 
     .books {
       display: flex;
@@ -47,15 +49,45 @@
     }
 
     .book {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 30px;
       border: 1px solid #eee;
       padding: 20px;
       border-radius: 8px;
+      flex-wrap: wrap;
     }
 
     .book img {
-      width: 100%;
-      height: auto;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+    .book-content {
+      flex: 1;
+    }
+
+    .book-content h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .book-content p {
+      margin-bottom: 1em;
+    }
+
+    .book-content .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
       border-radius: 4px;
+      font-weight: 600;
     }
 
     form {
@@ -84,6 +116,19 @@
       cursor: pointer;
     }
 
+    .youtube-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .youtube-section iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -94,29 +139,60 @@
 </head>
 <body>
   <header>
-    <h1>Honey Agrawal</h1>
+    <h1>Honey Agrawaaal</h1>
     <p>Author & Storyteller</p>
   </header>
 
   <section class="author-profile">
-    <img src="https://via.placeholder.com/140" alt="Honey Agrawal" />
-    <p>Honey Agrawal is a passionate writer whose stories blend emotion, wisdom, and vivid imagination. With a love for philosophy, culture, and everyday beauty, Honey crafts narratives that speak to the heart.</p>
+    <img src="portrait.png" alt="Honey Agrawaaal" />
+    <p>Honey Agrawaaal is a passionate writer whose stories blend emotion, wisdom, and vivid imagination. With a love for philosophy, culture, and everyday beauty, Honey crafts narratives that speak to the heart.</p>
   </section>
 
   <section>
     <h2>Books</h2>
     <div class="books">
+
+      <!-- Book 1 -->
       <div class="book">
-        <img src="https://via.placeholder.com/260x360" alt="Book Cover 1" />
-        <h3>Day and Night</h3>
-        <p>A poetic journey in Hindi and English that explores the contrast and harmony of life through dual perspectives.</p>
+        <img src="book1cover.png" alt="Book Cover 1" />
+        <div class="book-content">
+          <h3>साँझ- सवेरे black & white</h3>
+          <p>When nature talks to you, it has no words but when you talk to nature, you need words and more words.</p>
+          <p>
+            Welcome to a journey of words, where each verse is a step into the landscape of the soul. This collection, साँझ- सवेरे black & white, is a mosaic of moments—woven together with threads of emotion, reflection, and insight. Each poetic verse within these pages is a whisper from the heart, an echo of personal experiences and universal truths.
+          </p>
+          <p>
+            As you turn these pages, I invite you to find solace in the familiar, wonder in the unknown, and perhaps a piece of yourself in the verses that follow. Thank you for embarking on this poetic journey with me. I hope you find as much meaning in these poems as I found in writing them.
+          </p>
+          <a href="https://www.amazon.com/dp/B0DJHD6XJP" target="_blank" class="button">Buy on Amazon</a>
+        </div>
       </div>
+
+      <!-- Book 2 -->
       <div class="book">
-        <img src="https://via.placeholder.com/260x360" alt="Book Cover 2" />
-        <h3>Echoes of Thought</h3>
-        <p>A reflection on mindfulness and resilience, this collection brings calm and clarity to everyday challenges.</p>
+        <img src="book2cover.png" alt="Book Cover 2" />
+        <div class="book-content">
+          <h3>साँझ- सवेरे black & white – Part 2</h3>
+          <p>
+            This is not just a collection of poems but pieces of my inner journey. They are not written in a rush, but like how a night sky is filled with myriad stars slowly and gradually.
+          </p>
+          <p>
+            Following the footsteps of my first book (also available on Amazon), this new volume साँझ- सवेरे black & white part-2 continues to explore life philosophy through verses. Originally written in Hindi and then translated into English—I hope the language won't matter, but every poem is expected to meet you where you are and gently lead you inward.
+          </p>
+          <p>
+            I welcome you all to the pages of my heart... of my life.
+          </p>
+        </div>
       </div>
+
     </div>
+  </section>
+
+  <section class="youtube-section">
+    <h2>Latest video on YouTube</h2>
+    <iframe src="https://www.youtube.com/embed/272MdG8aE5k" allowfullscreen title="Honey Reading Nest"></iframe>
+    <br><br>
+    <a href="https://www.youtube.com/@honeyreadingnest" target="_blank" class="button">Visit My Channel</a>
   </section>
 
   <section>
@@ -137,28 +213,28 @@
   </section>
 
   <footer>
-    &copy; 2025 Honey Agrawal. All rights reserved.
+    &copy; 2025 Honey Agrawaaal. All rights reserved.
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-  emailjs.init("767McGS6Bimd3DLvt");
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("767McGS6Bimd3DLvt");
 
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    emailjs.send("service_6hv8fqw", "template_lnpznan", {
-      from_name: document.getElementById("name").value,
-      from_email: document.getElementById("email").value,
-      message: document.getElementById("message").value
-    }).then(function () {
-      alert("Message sent successfully!");
-      document.getElementById("contactForm").reset();
-    }, function (error) {
-      console.error("EmailJS error:", error);
-      alert("Failed to send message. Please try again.");
+      emailjs.send("service_6hv8fqw", "template_lnpznan", {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      }).then(function () {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      }, function (error) {
+        console.error("EmailJS error:", error);
+        alert("Failed to send message. Please try again.");
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
